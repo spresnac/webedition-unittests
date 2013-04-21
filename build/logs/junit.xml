@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="webEdition we-Tags" tests="9" assertions="9" failures="0" errors="0" time="0.528242">
+    <testsuite name="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" fullPackage="we.tag" tests="9" assertions="9" failures="0" errors="0" time="0.528242">
+      <testcase name="testWeTagTitleAllOptionsDefault" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="16" assertions="1" time="0.058772"/>
+      <testcase name="testWeTagTitlePrefixOnly" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="33" assertions="1" time="0.064599"/>
+      <testcase name="testWeTagTitlePrefixAndDelimiter" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="50" assertions="1" time="0.055898"/>
+      <testcase name="testWeTagTitleSuffixOnly" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="67" assertions="1" time="0.036423"/>
+      <testcase name="testWeTagTitleSuffixAndDelimiter" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="84" assertions="1" time="0.055786"/>
+      <testcase name="testWeTagTitleDelimiterOnly" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="101" assertions="1" time="0.064711"/>
+      <testcase name="testWeTagTitlePrefixSuffixAndDelimiter" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="118" assertions="1" time="0.063342"/>
+      <testcase name="testWeTagTitleHtmlSpecialcharsRewrite" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="135" assertions="1" time="0.064124"/>
+      <testcase name="testWeTagTitleHtmlSpecialcharsNoRewrite" class="we_tag_titleTest" file="C:\zend\Apache2\htdocs\webedition\tests\webEdition\we\include\we_tags\we_tag_titleTest.php" line="152" assertions="1" time="0.064587"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
