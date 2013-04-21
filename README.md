@@ -1,5 +1,6 @@
 webEdition
 ==========
 
-Unit tests written for the CMS webEdition
-here be more text to be written soon ;)
+Unit tests written for the CMS webEdition 
+
+You will need a installed webEdition in root-folder to run the tests
