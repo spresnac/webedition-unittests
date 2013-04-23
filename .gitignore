@@ -8,3 +8,5 @@
 /build/api
 /build/*.xml
 /.project
+/build/logs/*.xml
+/build/logs/*.xml
