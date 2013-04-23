@@ -6,11 +6,8 @@ Was ist das hier?
 ===
 Hier schreiben wir Unit Tests für das Offene PHP-CMS webEditon
 
-Was brauchst du?
-===
-In den root Folder muss eine lauffähige webEdition Installation mit den Ordner 'webEdition' und '__we_thumbs__'.
-
 Die Tests starten
 ===
-Konsole öffnen, in den Ordner 'tests' wechseln und dort 'phpunit' starten. Die Anweisungen aus der 'phpunit.xml' werden dann ausgeführt.
+Konsole öffnen, in den root Ordner dieses Projektes wechseln und dort 'phpunit' starten. 
+Die Anweisungen aus der 'phpunit.xml' werden dann ausgeführt.
 
