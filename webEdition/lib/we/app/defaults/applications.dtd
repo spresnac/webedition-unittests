@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--- Describes an webEdition application -->
+<!ELEMENT manifest (creator,maintainer?,thirdparty*,info,requirements)>
+
+<!ENTITY % _person "((authors|author)?,location,year+)" >
+<!ENTITY % _versionReq "minVersion CDATA #REQUIRED maxVersion CDATA #IMPLIED" >
+<!ENTITY % _versionOpt "minVersion CDATA #IMPLIED maxVersion CDATA #IMPLIED" >
+<!ENTITY % _lang "lang (de|en|fr) #REQUIRED" >
+
+<!--- Detailed information about the initial author -->
+<!ELEMENT creator (company|person)* >
+
+<!--- Detailed information about the maintainers -->
+<!ELEMENT maintainer (company|person)* >
+
+<!--- provide information about the company -->
+<!ELEMENT company ((authors|author)?,location+,year+) >
+<!ATTLIST company
+	name	CDATA #REQUIRED
+>
+<!--- provide information about an individual person -->
+<!ELEMENT person ((authors|author)?,location,year+)>
+
+<!--- provide information about 3rd-party product with name and version -->
+<!ELEMENT thirdparty ((company|person),license) >
+<!ATTLIST thirdparty
+	name CDATA #REQUIRED
+	version CDATA #REQUIRED
+>
+
+<!--- author's details -->
+<!ELEMENT author EMPTY>
+<!ATTLIST author
+	name CDATA #REQUIRED
+	url CDATA #IMPLIED
+	email CDATA #IMPLIED
+>
+
+<!--- if more than one author -->
+<!ELEMENT authors (author*) >
+
+<!--- provide detailed adress information -->
+<!ELEMENT location (address?,phone?,fax?,email+,www*) >
+<!ATTLIST location
+	country (DE|GB|PL|IT|FR) #REQUIRED
+>
+
+
+<!--- postal contact address -->
+<!ELEMENT address (#PCDATA)>
+
+<!--- phone number (international format +xx yy) -->
+<!ELEMENT phone (#PCDATA)>
+
+<!--- fax number (international format +xx yy) -->
+<!ELEMENT fax (#PCDATA)>
+
+<!--- email-adress for contact format name@domain.tld -->
+<!ELEMENT email (#PCDATA)>
+
+<!--- homepage with link text -->
+<!ELEMENT www (#PCDATA)*>
+<!ATTLIST www
+	url CDATA #REQUIRED
+>
+
+<!--- provide a year -->
+<!ELEMENT year (#PCDATA)>
+
+<!--- provide information about the application itself <br/>appName is the Name of the application -->
+<!ELEMENT info (class+,license,title+,description+,features?,(categories|category))>
+<!ATTLIST info
+	appName CDATA #REQUIRED
+	encoding (ISO8859-1|ISO8859-15|UTF8) "UTF8"
+>
+<!--- name all classes introduced by this application -->
+<!ELEMENT class (#PCDATA)>
+
+<!--- name the license, version and where to find the licence -->
+<!ELEMENT license EMPTY >
+<!ATTLIST license
+	name CDATA #REQUIRED
+	version CDATA #REQUIRED
+	url CDATA #REQUIRED
+>
+
+<!--- give the application a title shown on selection <br/> lang must specify the language of the title -->
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title %_lang; >
+
+<!--- explain, what this application is about<br/> lang must specify the language of the title -->
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description %_lang; >
+
+<!--- feature set tells how webEdition handles this application <br/> default values are shown -->
+<!ELEMENT features EMPTY >
+<!ATTLIST features
+	supportshooks (true|false) "false"
+	deactivatable (true|false) "true"
+	deinstallable (true|false) "true"
+	updatable (true|false) "true"
+>
+
+<!--- in which categories (if more than one) should this application appear -->
+<!ELEMENT categories (category)*>
+
+<!--- name the category -->
+<!ELEMENT category (#PCDATA)>
+
+<!--- which requirements must be fulfilled in order to run this application -->
+<!ELEMENT requirements (php,webedition)>
+
+<!--- details about php itself<br/>you must provide a minimum version number -->
+<!ELEMENT php (extension*)>
+<!ATTLIST php %_versionReq; >
+
+<!--- if specific php extensions need to be installed, name these, and if applicable its versionnumbers -->
+<!ELEMENT extension (#PCDATA) >
+<!ATTLIST extension %_versionOpt; >
+
+<!--- name all dependencies concerning webedition itself, a versionnumber is needed -->
+<!ELEMENT webedition (sdk,module*,application*) >
+<!ATTLIST webedition %_versionReq; >
+
+<!--- name the sdk versionnumbers needed -->
+<!ELEMENT sdk EMPTY >
+<!ATTLIST sdk %_versionReq; >
+
+<!--- name all modules, that need to be enabled -->
+<!ELEMENT module (#PCDATA)>
+<!ATTLIST module %_versionOpt; >
+
+<!--- name all additional applications that need to be installed before this application can be run -->
+<!ELEMENT application (#PCDATA)>
+<!ATTLIST application %_versionOpt; >

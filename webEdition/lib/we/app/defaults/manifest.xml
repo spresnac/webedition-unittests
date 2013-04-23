@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE manifest SYSTEM "applications.dtd">
+<!-- default manifest for webEdition applications -->
+<manifest>
+	<creator>
+		<company name="webEdition e.V.">
+			<author name="webedition.org" />
+			<location country="DE">
+				<address>Innsbrucker Str. 35, 10825 Berlin</address>
+				<phone>+49 30 766835-79</phone>
+				<fax>+49 30 766835-85</fax>
+				<email>info@webedition.org</email>
+				<www url="http://www.webedition.org">Webedtion Homepage</www>
+			</location>
+			<year>2010</year>
+		</company>
+	</creator>
+
+	<info appName="exampleApplication">
+		<class>exampleApplication</class>
+		<license name="GPL" version="3" url="http://www.gnu.org/licenses/gpl.html"/>
+		<title lang="de">Meine we-Applikation</title>
+		<description lang="de">Keine Beschreibung vorhanden!</description>
+		<category>miscellaneous</category>
+	</info>
+
+	<requirements>
+		<php minVersion="5.2.4">
+			<extension>simplexml</extension>
+			<extension>gdlib</extension>
+		</php>
+		<webedition minVersion="6.1.0">
+			<sdk minVersion="6.1.0"/>
+		</webedition>
+	</requirements>
+
+</manifest>

@@ -1,0 +1,18 @@
+<?php
+
+$GLOBALS['_we_active_integrated_modules'] = array(
+	'users',
+	'customer',
+	'schedule',
+	'shop',
+	'editor',
+	'object',
+	'messaging',
+	'workflow',
+	'newsletter',
+	'banner',
+	'export',
+	'voting',
+	'spellchecker',
+	'glossary',
+);

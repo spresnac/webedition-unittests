@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE manifest SYSTEM "applications.dtd">
+<!-- example manifest for webEdition applications showing examples of all supported values -->
+<manifest>
+	<creator>
+		<company name="webEdition e.V.">
+			<authors>
+				<author name="myname" email="contact@direct.de"/>
+				<author name="another author's name" url="http://www.myHomepage.de"/>
+			</authors>
+			<location country="DE">
+				<address>c/o Löwi &amp; Partner, Innsbrucker Str. 35, 10825 Berlin</address>
+				<phone>+49 30 766835-79</phone>
+				<fax>+49 30 766835-85</fax>
+				<email>info@webedition.org</email>
+				<www url="http://www.webedition.org">webEdition-Site</www>
+			</location>
+			<location country="FR">
+				<address>somewhere in france</address>
+				<phone>+33 1234556</phone>
+				<fax>+33 1234557</fax>
+				<email>email@url.fr</email>
+				<www url="http://www.xyz.fr">we speak french</www>
+			</location>
+			<year>2010</year>
+		</company>
+		<person>
+			<author name="me"/>
+			<location country="DE">
+				<email>me@my.de</email>
+			</location>
+			<year>2011</year>
+		</person>
+
+	</creator>
+
+	<maintainer>
+		<person>
+			<author name="my-author"/>
+			<location country="DE">
+		<!-- no adress provided -->
+				<email>info@webedition.org</email>
+			</location>
+			<year>2010</year>
+		</person>
+	</maintainer>
+
+	<thirdparty name="external Aplication" version="1.0">
+		<company name="someComp">
+			<author name="who ever" />
+			<location country="DE">
+				<email>test@test.de</email>
+			</location>
+			<year>2011</year>
+		</company>
+		<license name="GPL" version="2" url="http://www.gnu.org/licenses/gpl.html"/>
+	</thirdparty>
+
+	<info appName="testApp" encoding="ISO8859-15">
+		<class>myClass</class>
+		<license name="GPL" version="3" url="http://www.gnu.org/licenses/gpl.html" />
+		<title lang="de">meine erste Applikation</title>
+		<title lang="en">my first application</title>
+		<description lang="de">sie macht irgendwas keine Ahnung was</description>
+		<description lang="en">I don't exactly know what it is supposed to do</description>
+		<features supportshooks="true" deactivatable="false" deinstallable="false" updatable="false"/>
+		<categories>
+			<category>simpleTool</category>
+			<category>complexTool</category>
+		</categories>
+	</info>
+
+	<requirements>
+		<php minVersion="5.2.0">
+			<extension minVersion="1.0">simplexml</extension>
+			<extension maxVersion="2.0">gdlib</extension>
+		</php>
+		<webedition minVersion="6.1.0">
+			<sdk minVersion="6.1.0" maxVersion="6.3.0"></sdk>
+			<module>customer</module>
+			<module>shop</module>
+			<application minVersion="0.9">anotherApplication</application>
+		</webedition>
+	</requirements>
+
+</manifest>

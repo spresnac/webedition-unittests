@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Dokumentation der DTD-Grammatik</title>
+<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
+</head>
+
+<!-- Generated on 04.01.2011 by NetBeans XML module. -->
+<body>
+
+<hr />
+<h2>Elementindex</h2>
+<ul><li><tt><a href="#address">address</a></tt></li>
+<li><tt><a href="#application">application</a></tt></li>
+<li><tt><a href="#author">author</a></tt></li>
+<li><tt><a href="#authors">authors</a></tt></li>
+<li><tt><a href="#categories">categories</a></tt></li>
+<li><tt><a href="#category">category</a></tt></li>
+<li><tt><a href="#class">class</a></tt></li>
+<li><tt><a href="#company">company</a></tt></li>
+<li><tt><a href="#creator">creator</a></tt></li>
+<li><tt><a href="#description">description</a></tt></li>
+<li><tt><a href="#email">email</a></tt></li>
+<li><tt><a href="#extension">extension</a></tt></li>
+<li><tt><a href="#fax">fax</a></tt></li>
+<li><tt><a href="#features">features</a></tt></li>
+<li><tt><a href="#info">info</a></tt></li>
+<li><tt><a href="#license">license</a></tt></li>
+<li><tt><a href="#location">location</a></tt></li>
+<li><tt><a href="#maintainer">maintainer</a></tt></li>
+<li><tt><a href="#manifest">manifest</a></tt></li>
+<li><tt><a href="#module">module</a></tt></li>
+<li><tt><a href="#person">person</a></tt></li>
+<li><tt><a href="#phone">phone</a></tt></li>
+<li><tt><a href="#php">php</a></tt></li>
+<li><tt><a href="#requirements">requirements</a></tt></li>
+<li><tt><a href="#sdk">sdk</a></tt></li>
+<li><tt><a href="#thirdparty">thirdparty</a></tt></li>
+<li><tt><a href="#title">title</a></tt></li>
+<li><tt><a href="#webedition">webedition</a></tt></li>
+<li><tt><a href="#www">www</a></tt></li>
+<li><tt><a href="#year">year</a></tt></li>
+</ul>
+
+<hr />
+<h2>Elementdetails</h2>
+
+
+<hr />
+<h2><a name="manifest"></a>manifest</h2>
+<div>Describes an webEdition application</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#creator">creator</a>, <a href="#maintainer">maintainer</a>?, <a href="#thirdparty">thirdparty</a>*, <a href="#info">info</a>, <a href="#requirements">requirements</a>)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt></tt></p>
+
+
+<hr />
+<h2><a name="creator"></a>creator</h2>
+<div>Detailed information about the initial author</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#company">company</a>&nbsp;| <a href="#person">person</a>)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#manifest">manifest</a></tt></p>
+
+
+<hr />
+<h2><a name="maintainer"></a>maintainer</h2>
+<div>Detailed information about the maintainers</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#company">company</a>&nbsp;| <a href="#person">person</a>)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#manifest">manifest</a></tt></p>
+
+
+<hr />
+<h2><a name="company"></a>company</h2>
+<div>provide information about the company</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA name</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>((<a href="#authors">authors</a>&nbsp;| <a href="#author">author</a>)?, <a href="#location">location</a>+, <a href="#year">year</a>+)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#creator">creator</a>, <a href="#maintainer">maintainer</a>, <a href="#thirdparty">thirdparty</a></tt></p>
+
+
+<hr />
+<h2><a name="person"></a>person</h2>
+<div>provide information about an individual person</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>((<a href="#authors">authors</a>&nbsp;| <a href="#author">author</a>)?, <a href="#location">location</a>, <a href="#year">year</a>+)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#creator">creator</a>, <a href="#maintainer">maintainer</a>, <a href="#thirdparty">thirdparty</a></tt></p>
+
+
+<hr />
+<h2><a name="thirdparty"></a>thirdparty</h2>
+<div>provide information about 3rd-party product with name and version</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA name</tt></li>
+<li><tt>#REQUIRED CDATA version</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>((<a href="#company">company</a>&nbsp;| <a href="#person">person</a>), <a href="#license">license</a>)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#manifest">manifest</a></tt></p>
+
+
+<hr />
+<h2><a name="author"></a>author</h2>
+<div>author's details</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA name</tt></li>
+<li><tt>#IMPLIED CDATA url</tt></li>
+<li><tt>#IMPLIED CDATA email</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>EMPTY</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#company">company</a>, <a href="#person">person</a>, <a href="#authors">authors</a></tt></p>
+
+
+<hr />
+<h2><a name="authors"></a>authors</h2>
+<div>if more than one author</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#author">author</a>*)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#company">company</a>, <a href="#person">person</a></tt></p>
+
+
+<hr />
+<h2><a name="location"></a>location</h2>
+<div>provide detailed adress information</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED ENUMERATION ( DE | GB | PL | IT | FR ) country</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#address">address</a>?, <a href="#phone">phone</a>?, <a href="#fax">fax</a>?, <a href="#email">email</a>+, <a href="#www">www</a>*)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#company">company</a>, <a href="#person">person</a></tt></p>
+
+
+<hr />
+<h2><a name="address"></a>address</h2>
+<div>postal contact address</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#location">location</a></tt></p>
+
+
+<hr />
+<h2><a name="phone"></a>phone</h2>
+<div>phone number (international format +xx yy)</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#location">location</a></tt></p>
+
+
+<hr />
+<h2><a name="fax"></a>fax</h2>
+<div>fax number (international format +xx yy)</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#location">location</a></tt></p>
+
+
+<hr />
+<h2><a name="email"></a>email</h2>
+<div>email-adress for contact format name@domain.tld</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#location">location</a></tt></p>
+
+
+<hr />
+<h2><a name="www"></a>www</h2>
+<div>homepage with link text</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA url</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#location">location</a></tt></p>
+
+
+<hr />
+<h2><a name="year"></a>year</h2>
+<div>provide a year</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#company">company</a>, <a href="#person">person</a></tt></p>
+
+
+<hr />
+<h2><a name="info"></a>info</h2>
+<div>provide information about the application itself <br/>appName is the Name of the application</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA appName</tt></li>
+<li><tt>#DEFAULT ENUMERATION ( ISO8859-1 | ISO8859-15 | UTF8 ) encoding = UTF8</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#class">class</a>+, <a href="#license">license</a>, <a href="#title">title</a>+, <a href="#description">description</a>+, <a href="#features">features</a>?, (<a href="#categories">categories</a>&nbsp;| <a href="#category">category</a>))</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#manifest">manifest</a></tt></p>
+
+
+<hr />
+<h2><a name="class"></a>class</h2>
+<div>name all classes introduced by this application</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#info">info</a></tt></p>
+
+
+<hr />
+<h2><a name="license"></a>license</h2>
+<div>name the license, version and where to find the licence</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA name</tt></li>
+<li><tt>#REQUIRED CDATA version</tt></li>
+<li><tt>#REQUIRED CDATA url</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>EMPTY</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#thirdparty">thirdparty</a>, <a href="#info">info</a></tt></p>
+
+
+<hr />
+<h2><a name="title"></a>title</h2>
+<div>give the application a title shown on selection <br/> lang must specify the language of the title</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED ENUMERATION ( de | en | fr ) lang</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#info">info</a></tt></p>
+
+
+<hr />
+<h2><a name="description"></a>description</h2>
+<div>explain, what this application is about<br/> lang must specify the language of the title</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED ENUMERATION ( de | en | fr ) lang</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#info">info</a></tt></p>
+
+
+<hr />
+<h2><a name="features"></a>features</h2>
+<div>feature set tells how webEdition handles this application <br/> default values are shown</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#DEFAULT ENUMERATION ( true | false ) supportshooks = false</tt></li>
+<li><tt>#DEFAULT ENUMERATION ( true | false ) deactivatable = true</tt></li>
+<li><tt>#DEFAULT ENUMERATION ( true | false ) deinstallable = true</tt></li>
+<li><tt>#DEFAULT ENUMERATION ( true | false ) updatable = true</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>EMPTY</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#info">info</a></tt></p>
+
+
+<hr />
+<h2><a name="categories"></a>categories</h2>
+<div>in which categories (if more than one) should this application appear</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#category">category</a>)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#info">info</a></tt></p>
+
+
+<hr />
+<h2><a name="category"></a>category</h2>
+<div>name the category</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#info">info</a>, <a href="#categories">categories</a></tt></p>
+
+
+<hr />
+<h2><a name="requirements"></a>requirements</h2>
+<div>which requirements must be fulfilled in order to run this application</div>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#php">php</a>, <a href="#webedition">webedition</a>)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#manifest">manifest</a></tt></p>
+
+
+<hr />
+<h2><a name="php"></a>php</h2>
+<div>details about php itself<br/>you must provide a minimum version number</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA minVersion</tt></li>
+<li><tt>#IMPLIED CDATA maxVersion</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#extension">extension</a>*)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#requirements">requirements</a></tt></p>
+
+
+<hr />
+<h2><a name="extension"></a>extension</h2>
+<div>if specific php extensions need to be installed, name these, and if applicable its versionnumbers</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#IMPLIED CDATA minVersion</tt></li>
+<li><tt>#IMPLIED CDATA maxVersion</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#php">php</a></tt></p>
+
+
+<hr />
+<h2><a name="webedition"></a>webedition</h2>
+<div>name all dependencies concerning webedition itself, a versionnumber is needed</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA minVersion</tt></li>
+<li><tt>#IMPLIED CDATA maxVersion</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(<a href="#sdk">sdk</a>, <a href="#module">module</a>*, <a href="#application">application</a>*)</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#requirements">requirements</a></tt></p>
+
+
+<hr />
+<h2><a name="sdk"></a>sdk</h2>
+<div>name the sdk versionnumbers needed</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#REQUIRED CDATA minVersion</tt></li>
+<li><tt>#IMPLIED CDATA maxVersion</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>EMPTY</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#webedition">webedition</a></tt></p>
+
+
+<hr />
+<h2><a name="module"></a>module</h2>
+<div>name all modules, that need to be enabled</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#IMPLIED CDATA minVersion</tt></li>
+<li><tt>#IMPLIED CDATA maxVersion</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#webedition">webedition</a></tt></p>
+
+
+<hr />
+<h2><a name="application"></a>application</h2>
+<div>name all additional applications that need to be installed before this application can be run</div>
+<p><b>Deklarierte Attribute</b></p>
+<ul><li><tt>#IMPLIED CDATA minVersion</tt></li>
+<li><tt>#IMPLIED CDATA maxVersion</tt></li>
+</ul>
+<p><b>Inhaltsmodell des Elements</b></p>
+<p><tt>(#PCDATA)*</tt></p>
+<p><b>Referenziert von</b></p>
+<p><tt><a href="#webedition">webedition</a></tt></p>
+</body></html>

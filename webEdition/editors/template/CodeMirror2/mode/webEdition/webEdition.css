@@ -1,0 +1,66 @@
+/**
+ * webEdition CMS
+ *
+ * This source is part of webEdition CMS. webEdition CMS is
+ * free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * any later version.
+ *
+ * The GNU General Public License can be found at
+ * http://www.gnu.org/copyleft/gpl.html.
+ * A copy is found in the textfile
+ * webEdition/licenses/webEditionCMS/License.txt
+ *
+ * @category   webEdition
+ * @package    webEdition_base
+ * @license    http://www.gnu.org/copyleft/gpl.html  GPL
+*/
+
+.weTag, .cm-weTag{ font-weight:bold;color:#ff8a00;}
+.weTagAttribute, .cm-weTagAttribute{color:grey;}
+.weSelfClose:hover:after, .cm-weSelfClose:hover:after, .weOpenTag:hover:after, .cm-weOpenTag:hover:after, .weTagAttribute:hover:after, .cm-weTagAttribute:hover:after {
+	position: absolute;
+	z-index: 10;
+	white-space: normal;
+	max-width: 40em;
+	background: rgba(0, 0, 0, 0.85);
+	padding: 3px 7px;
+	color: #FFF;
+	border-radius: 3px;
+	margin-left: 7px;
+	margin-top: -3px;
+}
+
+.CodeMirror{
+	position: relative;
+	color: black;
+	background: white;
+	padding: 5px 8px;
+	z-index: 5;
+	border: outset 1px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	border-radius: 3px;
+}
+
+.CodeMirror pre {
+		/*z-index: auto;*/
+}
+
+.activeline,.CodeMirror-linebackground {
+	background: lightyellow !important;
+	z-index: -1;
+}
+
+.searched {
+	background: yellow;
+}
+
+span.c-like-keyword {
+	color: #000;
+	font-weight: bold;
+}
+
+.CodeMirror-selected {
+	background: #b0c5e3;
+}

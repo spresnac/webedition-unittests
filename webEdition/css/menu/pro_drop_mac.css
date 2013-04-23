@@ -1,0 +1,139 @@
+.preload1 {
+	background: url(/webEdition/images/menu/arr_mac_over.gif);
+}
+.preload2 {
+	background: url(/webEdition/images/menu/arr_mac.gif);
+}
+.preload3 {
+	background: url(/webEdition/images/menu/bg_mac_active.gif);
+}
+
+#nav {
+	font-size: 11pt;
+}
+
+#nav li.top:hover div {
+	background-color: transparent;
+}
+
+#nav li.top div.click:hover {
+	color: #000000;
+}
+
+#nav li.top div a.top_link {
+	font-size: 10pt;
+}
+
+#nav li.top:hover div a.top_link {
+	color: #000000;
+}
+
+#nav li div.click:hover ul{
+	background-color: transparent;
+	background: url(/webEdition/images/menu/bg_mac.png) repeat;
+	opacity: 0.98;	
+	border: 1px solid #cccccc;
+	width: 16.6em;
+	padding: 4px 0 4px 0;
+}
+
+#nav li div.click:hover ul.sub li{
+	width: 16.6em;
+	color: #000000;
+	border-top: solid 1px transparent;
+	border-bottom: solid 1px transparent;
+}
+
+#nav li div.click:hover ul.sub li ul li{
+	width: 15em;
+	color: #000000;
+	border-top: solid 1px transparent;
+	border-bottom: solid 1px transparent;
+}
+
+#nav li div.click:hover ul.sub li:hover{
+	background: url(/webEdition/images/menu/bg_mac_active.gif) repeat;
+	opacity: 1.0;	
+	border-top: solid 1px #3366ff;
+	border-bottom: solid 1px #0066ff;
+	color: #ffffff;
+}
+
+#nav li div.click:hover ul.sub li:hover a{
+	color: #ffffff;
+	display: block;
+}
+
+#nav li div.click:hover ul.sub li:hover li a,
+#nav li div.click:hover ul.sub li:hover li ul li a{
+	color: #000000;
+}
+
+
+#nav li div.click:hover ul.sub li a,
+#nav li div.click:hover ul.sub li ul li a{
+	width: 12.8em;
+	line-height: 1.9ex;
+	padding-left: 2.4em;
+	padding-right: 1em;
+	text-indent: -1em;
+	margin: 0px 0px 1px 0px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+#nav li div.click:hover ul.sub li ul li a{
+	width: 11.2em;
+}
+
+#nav li ul.sub li a.fly {
+	background-color: transparent;
+	background: url(/webEdition/images/menu/arr_mac.gif) 99% 50% no-repeat;
+}
+
+#nav li div.click:hover ul.sub li a:hover {
+	background-color: transparent;
+}
+#nav li div.click:hover ul.sub li a.fly:hover {
+	background-color: transparent;
+	background: url(/webEdition/images/menu/arr_mac_over.gif) 99% 50% no-repeat;
+}
+
+#nav li div.click ul li:hover > a.fly {
+	background-color: transparent;
+	background: url(/webEdition/images/menu/arr_mac_over.gif) 99% 50% no-repeat;
+}
+
+#nav li div.click:hover ul li:hover ul,
+#nav li div.click:hover ul li:hover ul li:hover ul,
+#nav li div.click:hover ul li:hover ul li:hover ul li:hover ul,
+#nav li div.click:hover ul li:hover ul li:hover ul li:hover ul li:hover ul{
+	left: 14.8em;
+	top: -6px;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	width: 15em;
+	padding: 4px 0px 5px 0px;
+	border-radius: 5px;
+	color: #000000;
+}
+
+#nav li div.click:hover ul li:hover ul{
+	left: 16.3em;
+}
+
+#nav li div.click:hover ul li:hover ul li:hover a,
+#nav li div.click:hover ul li:hover ul li ul li:hover a{
+	color: #ffffff;
+}
+
+#nav li div.click:hover ul li.disabled,
+#nav li div.click:hover ul li.disabled:hover,
+#nav li div.click:hover ul li ul li.disabled,
+#nav li div.click:hover ul li ul li.disabled:hover{
+	background-image: none;
+	background-color: #cccccc;
+	border-top: solid 1px #cccccc;
+	border-bottom: none;
+	margin: 4px 0px 6px 0px;
+}

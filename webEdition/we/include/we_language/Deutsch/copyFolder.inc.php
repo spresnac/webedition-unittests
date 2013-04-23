@@ -1,0 +1,25 @@
+<?php
+/** Generated language file of webEdition CMS */
+$l_copyFolder=array(
+	'categories'=>'Kategorien',
+	'copyFile'=>'Kopiere Datei: %s',
+	'copyFolder'=>'Kopiere Verzeichnis: %s',
+	'copy_success'=>'Der Kopiervorgang wurde erfolgreich abgeschlossen!',
+	'correctTemplate'=>'Korrigiere Vorlage:  %s',
+	'create_new_doctypes'=>'Erzeuge neue Dokument-Typen',
+	'create_new_includedTemplates'=>'Erzeuge neue inkludierte Vorlagen',
+	'create_new_masterTemplates'=>'Erzeuge neue Hauptvorlagen',
+	'create_new_templates'=>'Erzeuge neue Vorlagen',
+	'destdir'=>'Neue Vorlagen erstellen in',
+	'headline'=>'Verzeichnis kopieren',
+	'object_copy'=>'Kopiere Objekte und Objektordner',
+	'object_copy_no_folders'=>'kopiere keine Unterordner',
+	'overwrite_categories'=>'Überschreibe Kategorien',
+	'prepareTemplates'=>'Erzeugen neuer Vorlagen vorbereiten',
+	'rewrite'=>'Neu schreiben: %s',
+	'sameName_expl'=>'Bestimmen Sie hier das Verhalten von webEdition, wenn ein Objekt mit gleichem Namen und Pfad existiert.',
+	'sameName_headline'=>'Was tun bei gleichem Namen?',
+	'sameName_nothing'=>'Objekt nicht kopieren',
+	'sameName_overwrite'=>'Existierendes Objekt überschreiben',
+	'sameName_rename'=>'Neues Objekt umbenennen',
+);
