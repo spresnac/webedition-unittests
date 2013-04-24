@@ -1,6 +1,8 @@
 /.buildpath
 /.idea
 /.settings
+/__we_thumbs__
+/webEdition
 /build/logs/report/*
 /build/logs/*.xml
 /build/api
