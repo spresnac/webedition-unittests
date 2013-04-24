@@ -1,8 +1,8 @@
 <?php
-require_once 'webEdition/we/include/we_global.inc.php';
-require_once 'webEdition/we/include/we_tag.inc.php';
-require_once 'webEdition/we/include/we_classes/tag/we_tag_tagParser.class.php';
-require_once 'webEdition/we/include/we_tags/we_tag_css.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_global.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_tag.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_classes/tag/we_tag_tagParser.class.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_tags/we_tag_css.inc.php';
 
 class we_tag_cssTest extends \PHPUnit_Framework_TestCase
 {
@@ -18,7 +18,7 @@ class we_tag_cssTest extends \PHPUnit_Framework_TestCase
 
     protected function tearDown()
     {
-        mysql_query('TRUNCATE tblFile');
+        //mysql_query('TRUNCATE tblFile');
     }
 
     public function testWeTagCssAllOptionsDefaultIdNotExists() {

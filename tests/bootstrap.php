@@ -14,5 +14,8 @@ set_include_path(implode(PATH_SEPARATOR, array(
 
 // for simulating a remote host for webedition-config
 $_SERVER["HTTP_HOST"] = 'http://dev.webedition.de';
+$_SERVER['SERVER_NAME'] = 'http://dev.webedition.de';
+$_SERVER['DOCUMENT_ROOT'] = APPLICATION_PATH.DIRECTORY_SEPARATOR;
 
-require_once ('webEdition/lib/we/core/autoload.php');
+require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/conf/we_conf.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we.inc.php';
