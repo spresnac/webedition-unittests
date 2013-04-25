@@ -1,5 +1,4 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_global.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_tag.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_classes/tag/we_tag_tagParser.class.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_tags/we_tag_css.inc.php';
