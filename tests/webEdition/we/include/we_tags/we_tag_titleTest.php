@@ -5,12 +5,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_tags/we_tag_tit
 
 class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 {
-    protected function setUp()
-    {
+    protected function setUp(){
     }
 
-    protected function tearDown()
-    {
+    protected function tearDown(){
     }
 
     public function testWeTagTitleAllOptionsDefault() {
@@ -162,6 +160,24 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
         $content = 'Sänd&burg';
         $result = we_tag_title($attributes, $content);
         $expect = '<title>Sänd&burg</title>'."\n";
+        $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
+
+    }
+
+    public function testWeParseTagTitle() {
+
+        $attributes = array(
+
+            'htmlspecialchars' => false,
+            'prefix' => '',
+            'suffix' => '',
+            'delimiter' => ''
+
+        );
+
+        $content = 'FooBarFishForelle';
+        $result = we_parse_tag_title($attributes, $content);
+        $expect = "<?php printElement(we_tag('title',array('htmlspecialchars'=>'','prefix'=>'','suffix'=>'','delimiter'=>'',),\"FooBarFishForelle\"));?>";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
     }
