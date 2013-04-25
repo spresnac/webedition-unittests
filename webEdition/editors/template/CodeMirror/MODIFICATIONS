@@ -1,2 +1,0 @@
-This installation of CodeMirror includes CSCC by Q42, which made some changes to the core files
-See contrib/cscc/changes.txt for full listing, though line numbers are not correct since this instalation implements a different version of CodeMirror
