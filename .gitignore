@@ -1,12 +1,11 @@
 /.buildpath
 /.idea
 /.settings
+/.project
 /__we_thumbs__
 /webEdition
 /build/logs/report/*
 /build/logs/*.xml
-/build/api
+/build/api/*.html
+/build/api/*.txt
 /build/*.xml
-/.project
-/build/logs/*.xml
-/build/logs/*.xml
