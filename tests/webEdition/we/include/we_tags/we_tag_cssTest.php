@@ -5,6 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_tags/we_tag_css
 
 class we_tag_cssTest extends \PHPUnit_Framework_TestCase
 {
+
     protected function setUp() {
 
         // Create a dummy CSS file entry in DB
