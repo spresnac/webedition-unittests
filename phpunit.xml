@@ -9,7 +9,7 @@
 
         </blacklist>
     </filter>
-
+<!--
     <logging>
         <log type="coverage-html" target="./build/logs/report" charset="UTF-8" yui="true" highlight="true" lowUpperBound="35" highLowerBound="70" />
         <log type="coverage-clover" target="./build/logs/clover.xml"/>
@@ -18,5 +18,5 @@
         <log type="testdox-html" target="./build/api/testdox.html"/>
         <log type="testdox-text" target="./build/api/testdox.txt"/>
     </logging>
-
+-->
 </phpunit>
