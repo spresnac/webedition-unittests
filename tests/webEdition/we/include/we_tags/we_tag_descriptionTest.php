@@ -21,7 +21,7 @@ class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 
 		);
 		$content = 'Some foo description for the Side';
-		$result = we_tag_description($attributes, $content);
+		$result = we_tag('description', $attributes, $content);
 		$expect = '<meta name="description" content="Some foo description for the Side" />'."\n";
 		$this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -39,7 +39,7 @@ class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 
 		);
 		$content = 'Some foo description for the Side';
-		$result = we_tag_description($attributes, $content);
+		$result = we_tag('description', $attributes, $content);
 		$expect = '<meta name="description" content="Some foo &hellip;" />'."\n";
 		$this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -57,7 +57,7 @@ class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 
 		);
 		$content = 'Some foo description for the Side';
-		$result = we_tag_description($attributes, $content);
+		$result = we_tag('description', $attributes, $content);
 		$expect = '<meta name="description" content="Some foo description for the Side" />'."\n";
 		$this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -75,9 +75,9 @@ class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'Some foo description for the Side';
-        $result = we_tag_description($attributes, $content);
+        $result = we_tag('description', $attributes, $content);
         $expect = '<meta name="description" content="Some foo description for the Side" />'."\n";
-        $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
+        $this->assertTrue($result == '', 'result is set, but i should not be when using GLOBAL option! result was -> '.$result);
         $this->assertTrue(isset($GLOBALS['Foo']), 'Foo is not set to $GLOBALS');
         $this->assertTrue($GLOBALS['Foo'] == $expect, 'expected result is not correct in $GLOBALS! $GLOBALS["Foo"] was -> '.$_GET['Foo']);
 
@@ -95,9 +95,9 @@ class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'Some foo description for the Side';
-        $result = we_tag_description($attributes, $content);
+        $result = we_tag('description', $attributes, $content);
         $expect = '<meta name="description" content="Some foo description for the Side" />'."\n";
-        $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
+        $this->assertTrue($result == '', 'result is set, but i should not be when using GET option! result was -> '.$result);
         $this->assertTrue(isset($_GET['Foo']), 'Foo is not set to $_GET');
         $this->assertTrue($_GET['Foo'] == $expect, 'expected result is not correct in $_GET! $_GET["Foo"] was -> '.$_GET['Foo']);
 

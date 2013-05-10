@@ -20,7 +20,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
 		);
 		$content = 'myTitle';
-		$result = we_tag_title($attributes, $content);
+		$result = we_tag('title', $attributes, $content);
 		$expect = '<title>myTitle</title>'."\n";
 		$this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -37,7 +37,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'myTitle';
-        $result = we_tag_title($attributes, $content);
+        $result = we_tag('title', $attributes, $content);
         $expect = '<title>somePrefixmyTitle</title>'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -54,7 +54,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'myTitle';
-        $result = we_tag_title($attributes, $content);
+        $result = we_tag('title', $attributes, $content);
         $expect = '<title>somePrefix - myTitle</title>'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -71,7 +71,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'myTitle';
-        $result = we_tag_title($attributes, $content);
+        $result = we_tag('title', $attributes, $content);
         $expect = '<title>myTitlesomeSuffix</title>'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -88,7 +88,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'myTitle';
-        $result = we_tag_title($attributes, $content);
+        $result = we_tag('title', $attributes, $content);
         $expect = '<title>myTitle | someSuffix</title>'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -105,7 +105,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'myTitle';
-        $result = we_tag_title($attributes, $content);
+        $result = we_tag('title', $attributes, $content);
         $expect = '<title>myTitle</title>'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -122,7 +122,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'myTitle';
-        $result = we_tag_title($attributes, $content);
+        $result = we_tag('title', $attributes, $content);
         $expect = '<title>isPrefix -*- myTitle -*- someSuffix</title>'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -139,7 +139,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'Sänd&burg';
-        $result = we_tag_title($attributes, $content);
+        $result = we_tag('title', $attributes, $content);
         $expect = '<title>Sänd&amp;burg</title>'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -156,7 +156,7 @@ class we_tag_titleTest extends \PHPUnit_Framework_TestCase
 
         );
         $content = 'Sänd&burg';
-        $result = we_tag_title($attributes, $content);
+        $result = we_tag('title', $attributes, $content);
         $expect = '<title>Sänd&burg</title>'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 

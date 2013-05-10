@@ -39,7 +39,7 @@ class we_tag_cssTest extends \PHPUnit_Framework_TestCase
 
         );
 
-        $result = we_tag_css($attributes);
+        $result = we_tag('css', $attributes);
         $expect = '';
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -60,7 +60,7 @@ class we_tag_cssTest extends \PHPUnit_Framework_TestCase
 
         );
 
-        $result = we_tag_css($attributes);
+        $result = we_tag('css', $attributes);
         $expect = '<link title="" media="" applyto="" rel="stylesheet" type="text/css" href="/example.css" />'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -81,7 +81,7 @@ class we_tag_cssTest extends \PHPUnit_Framework_TestCase
 
         );
 
-        $result = we_tag_css($attributes);
+        $result = we_tag('css', $attributes);
         $expect = '<link title="someFooBarFish" media="" applyto="" rel="stylesheet" type="text/css" href="/example.css" />'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -102,7 +102,7 @@ class we_tag_cssTest extends \PHPUnit_Framework_TestCase
 
         );
 
-        $result = we_tag_css($attributes);
+        $result = we_tag('css', $attributes);
         $expect = '<link title="" media="screen,print" applyto="" rel="stylesheet" type="text/css" href="/example.css" />'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
@@ -123,7 +123,7 @@ class we_tag_cssTest extends \PHPUnit_Framework_TestCase
 
         );
 
-        $result = we_tag_css($attributes);
+        $result = we_tag('css', $attributes);
         $expect = '<link title="" media="" applyto="" rel="foo,stylesheet,bar" type="text/css" href="/example.css" />'."\n";
         $this->assertTrue($result == $expect, 'expected result is not correct! result was -> '.$result);
 
