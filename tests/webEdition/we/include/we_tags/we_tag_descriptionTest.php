@@ -7,6 +7,9 @@ class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
         if (isset($_GET['Foo'])) {
             unset($_GET['Foo']);
         }
+        if (isset($_POST['Foo'])) {
+            unset($_POST['Foo']);
+        }
         if (isset($GLOBALS['Foo'])) {
             unset($GLOBALS['Foo']);
         }
