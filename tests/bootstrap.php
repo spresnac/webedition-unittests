@@ -18,3 +18,4 @@ $_SERVER['SERVER_NAME'] = 'http://dev.webedition.de';
 $_SERVER['DOCUMENT_ROOT'] = APPLICATION_PATH.DIRECTORY_SEPARATOR;
 
 require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we.inc.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_tag.inc.php';

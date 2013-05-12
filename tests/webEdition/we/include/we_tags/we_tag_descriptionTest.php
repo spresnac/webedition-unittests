@@ -1,5 +1,4 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'webEdition/we/include/we_tags/we_tag_description.inc.php';
 
 class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 {
