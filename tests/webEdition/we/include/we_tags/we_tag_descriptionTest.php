@@ -3,6 +3,14 @@
 class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp(){
+
+        if (isset($_GET['Foo'])) {
+            unset($_GET['Foo']);
+        }
+        if (isset($GLOBALS['Foo'])) {
+            unset($GLOBALS['Foo']);
+        }
+
     }
 
     protected function tearDown(){
@@ -62,7 +70,7 @@ class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    public function testWeTagTitleAttrbiteToGlobalNameToFoo() {
+    public function testWeTagTitleAttributeToGlobalNameToFoo() {
 
         $attributes = array(
 
@@ -82,7 +90,7 @@ class we_tag_descriptionTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    public function testWeTagTitleAttrbiteToGetNameToFoo() {
+    public function testWeTagTitleAttributeToGetNameToFoo() {
 
         $attributes = array(
 
