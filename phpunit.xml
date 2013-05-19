@@ -4,10 +4,6 @@
         <directory>./tests/webEdition/we/include/we_tags</directory>
     </testsuite>
 
-    <testsuite name="global stuff">
-        <directory>./tests/webEdition/we/include</directory>
-    </testsuite>
-
     <filter>
         <blacklist>
 
